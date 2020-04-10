@@ -16,7 +16,11 @@ MediYantra is a cloud-enabled, mobile-ready Express JS powered web application t
   - Google Maps API
   - elfsight Website Widgets
   
-### Installation
+## Process Flow
+
+## Data Flow Diagram
+
+## Installation
 
 MediYantra requires [Node.js](https://nodejs.org/) v4+ to run.
 
