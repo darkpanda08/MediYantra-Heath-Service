@@ -1,0 +1,92 @@
+<body class="d-flex flex-column h-100" style="background-color: #f5f5f5;">
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="/">MediYantra</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/search">Testing Centre</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/ngo">NGO</a>
+          </li>
+          <% if (!login_info) { %>
+            
+          <% } else { %>
+            <li class="nav-item">
+              <a class="nav-link" href="/account">My Details</a>
+            </li>
+          <% } %>
+
+        </ul>
+        <form class="form-inline mt-2 mt-md-0">
+          <% if (!login_info) { %>
+            <a href="/users/login" class="btn btn-outline-warning my-2 my-sm-0">Login</a>
+          <% } else { %>
+            <a href="/users/logout" class="btn btn-outline-warning my-2 my-sm-0">Logout</a>
+          <% } %>
+        </form>
+      </div>
+    </nav>
+  </header>
+
+  <main role="main" class="flex-shrink-0">
+    <div class="container">
+      <% include ./partials/messages %>
+      <h1 class="mt-5">Select the service you want </h1>
+      <div class="row">
+        <div class="col-sm" style="padding: 1%;">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title"  style="padding-bottom:1% ;">Search Hospitals Near Me</h4>
+              <p class="card-text">Find the nearest medical facility to you with adequate beds and medical equipments available.</p>
+              <a href="/track" class="card-link">Click Here</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm" style="padding: 1%;">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title"  style="padding-bottom:1% ;">Testing Centres</h4>
+              <p class="card-text">Use the database to check COVID-19 testing centres in different regions of the country.</p>
+              <a href="/search" class="card-link">Click Here</a>
+            </div>
+          </div>
+        </div>
+        <div class="w-100"></div>
+        <div class="col-sm" style="padding: 1%;">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title"  style="padding-bottom:1% ;">NGO's</h4>
+              <p class="card-text">Contact the NGO's for donating food and other essential items for the needy people.</p>
+              <a href="/ngo" class="card-link">Click Here</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm" style="padding: 1%;">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title" style="padding-bottom:1% ;">General Advice Helpline</h4>
+              <p class="card-text">Seek important medical advice from qualified doctors and certified physicians through our helpline.</p>
+              <a href="/helpline" class="card-link">Click Here</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <footer class="footer mt-auto py-3">
+    <div class="container">
+      <span class="text-muted">&copy; Vineet</span>
+    </div>
+    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+    <div class="elfsight-app-c8a5615a-a06b-4b2e-bfa2-8cf4d1020965"></div>
+  </footer>
+</body>

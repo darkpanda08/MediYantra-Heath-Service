@@ -1,0 +1,88 @@
+<body class="d-flex flex-column h-100" style="background-color: #f5f5f5;">
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="/">MediYantra</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/search">Testing Centre <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/ngo">NGO</a>
+          </li>
+          <% if (!login_info) { %>
+            
+          <% } else { %>
+            <li class="nav-item">
+              <a class="nav-link" href="/account">My Details</a>
+            </li>
+          <% } %>
+        </ul>
+        
+        <form class="form-inline mt-2 mt-md-0">
+          <% if (!login_info) { %>
+            <a href="/users/login" class="btn btn-outline-warning my-2 my-sm-0">Login</a>
+          <% } else { %>
+            <a href="/users/logout" class="btn btn-outline-warning my-2 my-sm-0">Logout</a>
+          <% } %>
+        </form>
+      </div>
+    </nav>
+  </header>
+  
+  <main role="main" class="flex-shrink-0">
+    <div class="container">
+      <% include ./partials/messages %>
+      <h1 class="mt-5">Search Testing Centres</h1>
+      <p class="lead">Select the state from following:</p>
+      
+      <form class="form-inline my-2 my-lg-0" method="POST" action="/search">
+        <div class="form-group" style="padding-right: 1%;">
+          <select class="form-control" id="states" name="states">
+            <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+            <option value="Andhra Pradesh">Andhra Pradesh</option>
+            <option value="Assam">Assam</option>
+            <option value="Bihar">Bihar</option>
+            <option value="Chhattisgarh">Chhattisgarh</option>
+            <option value="Chnadigarh">Chnadigarh</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Gujarat">Gujarat</option>
+            <option value="Haryana">Haryana</option>
+            <option value="Himachal Pradesh">Himachal Pradesh</option>
+            <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+            <option value="Jharkhand">Jharkhand</option>
+            <option value="Karnataka">Karnataka</option>
+            <option value="Kerala">Kerala</option>
+            <option value="Madhya Pradesh">Madhya Pradesh</option>
+            <option value="Maharastra">Maharastra</option>
+            <option value="Manipur">Manipur</option>
+            <option value="Meghalaya">Meghalaya</option>
+            <option value="Odisha">Odisha</option>
+            <option value="Puducherry">Puducherry</option>
+            <option value="Punjab">Punjab</option>
+            <option value="Rajasthan">Rajasthan</option>
+            <option value="Tamil Nadu">Tamil Nadu</option>
+            <option value="Telangana">Telangana</option>
+            <option value="Tripura">Tripura</option>
+            <option value="Uttar Pradesh">Uttar Pradesh</option>
+            <option value="Uttarakhand">Uttarakhand</option>
+            <option value="West Bengal">West Bengal</option>
+          </select>
+        </div>
+        <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </main>
+
+  <footer class="footer mt-auto py-3">
+    <div class="container">
+      <span class="text-muted">&copy; Vineet</span>
+    </div>
+  </footer>
+</body>

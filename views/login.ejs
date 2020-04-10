@@ -1,0 +1,46 @@
+<body style="background-image:url(https://d3ha2z1h6pzc4t.cloudfront.net/webapp/login.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px">
+  <form class="form-signin" action="/users/login" method="POST">   
+    <% include ./partials/messages %>
+    <div class="text-center mb-4">
+      <h1 class="text-center mb-3"><i class="fas fa-sign-in-alt"></i>  Sign in</h1>
+      <p class="lead">Please login to continue</p>
+    </div>
+
+    <div class="form-label-group">
+      <input
+        type="email"
+        id="email"
+        name="email"
+        class="form-control"
+        placeholder="Enter Email"
+        autofocus
+      />
+      <label for="email">Email</label>
+    </div>
+
+    <div class="form-label-group">
+      <input
+        type="password"
+        id="password"
+        name="password"
+        class="form-control"
+        placeholder="Password"
+      />
+      <label for="inputPassword">Password</label>
+    </div>
+
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    <p class="lead mt-4">No Account? <a href="/users/register" style="color: purple"><strong>Create one!</strong></a><br>
+      Go to Home Page <a href="/" style="color: rgb(61, 34, 212)"><strong>Click Here</strong></a></p>
+    <p class="mt-5 mb-3 text-muted text-center">&copy; Vineet</p>
+  </form>
+</body>

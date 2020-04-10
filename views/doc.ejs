@@ -1,0 +1,64 @@
+<body class="d-flex flex-column h-100" style="background-color: #f5f5f5;">
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="/">MediYantra</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/search">Testing Centre</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/ngo">NGO</a>
+            </li>
+            <% if (!login_info) { %>
+            
+            <% } else { %>
+              <li class="nav-item">
+                <a class="nav-link" href="/account">My Details</a>
+              </li>
+            <% } %>
+          </ul>
+          
+          <form class="form-inline mt-2 mt-md-0">
+            <% if (!login_info) { %>
+              <a href="/users/login" class="btn btn-outline-warning my-2 my-sm-0">Login</a>
+            <% } else { %>
+              <a href="/users/logout" class="btn btn-outline-warning my-2 my-sm-0">Logout</a>
+            <% } %>
+          </form>
+        </div>
+      </nav>
+    </header>
+    
+    <main role="main" class="flex-shrink-0">
+      <div class="container">
+        <% include ./partials/messages %>
+        <h1 class="mt-5">Doctor Details</h1>
+        <div class="col-md-8">
+            <ul class="list-group" style="padding-bottom: 10px; padding-top: 10px;">
+                <li class="list-group-item"><strong>First Name: </strong><%= doc_details[0].first_name %></li>
+                <li class="list-group-item"><strong>Last Name: </strong><%= doc_details[0].last_name %></li>
+                <li class="list-group-item"><strong>Email: </strong><%= doc_details[0].qualification %></li>
+                <li class="list-group-item"><strong>Speciality: </strong><%= doc_details[0].speciality %></li>
+                <li class="list-group-item"><strong>Hospital: </strong><%= doc_details[0].hospital %></li>
+                <li class="list-group-item"><strong>Location: </strong><%= doc_details[0].location %></li>
+                <li class="list-group-item"><strong>Email: </strong><%= doc_details[0].email %></li>
+                <li class="list-group-item"><strong>Telephone No: </strong><%= doc_details[0].telephone %></li>
+            </ul>
+            <a href="/helpline" class="btn btn-info my-2 my-sm-0">Back</a>
+        </div>
+      </div>
+    </main>
+  
+    <footer class="footer mt-auto py-3">
+      <div class="container">
+        <span class="text-muted">&copy; Vineet</span>
+      </div>
+    </footer>
+  </body>
