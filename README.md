@@ -4,10 +4,6 @@ MediYantra Health Service - A suitable website to offer basic health services
 ## Desciption
 MediYantra is a cloud-enabled, mobile-ready Express JS powered web application to help patients to gather crucial information regarding hospitals nearby, diagnostic centres in their geographic region, NGO's that accept surplus food donations and medical advice from trained doctors and specialists. The website is very easy to use even for people not well-versed with the internet, to facilitate usage among both urban and rural dwellers.
 
-Youtube Link: https://youtu.be/Dr_CLm4s6WE
-
-Live Version of this Web Application: https://projects.darkpanda08.me
-
 ## Software Requirements
   - NodeJs
   - MongoBD
@@ -63,3 +59,9 @@ DB_name : Database Name
 (c) testing_centres: With columns id, state and name
 
 4. Go to elfsight.com and create 4 widgets: Click to call, Social Media links, Chats and Coronavirus Track and add the provided code into the views/dashboard.ejs in line 89 and views/layout.ejs in line 17-19.
+
+## Additional Details
+
+Youtube Link: https://youtu.be/Dr_CLm4s6WE
+
+Live Version of this Web Application: https://projects.darkpanda08.me
