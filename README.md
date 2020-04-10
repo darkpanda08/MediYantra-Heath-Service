@@ -1,5 +1,5 @@
 ## Title of Project
-MediYantra - A suitable website to offer basic health services
+MediYantra Health Service - A suitable website to offer basic health services
 
 ## Desciption
 MediYantra is a cloud-enabled, mobile-ready Express JS powered web application to help people .
