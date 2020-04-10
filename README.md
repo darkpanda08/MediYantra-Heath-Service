@@ -48,9 +48,9 @@ MediYantra is currently extended with the following tools. Instructions on how t
 1. To setup MongoDB, get the URI for MongoDB and paste it in config/keys.js file inside the quotes on line 2.
 
 2. To setup MySQL, Create a database and provide the connection details as envronment varibales as below mentioned:
-DB_host : Hostname
-DB_user : Username
-DB_pass : Password
+DB_host : Hostname,
+DB_user : Username,
+DB_pass : Password,
 DB_name : Database Name
 
 3. Create three tables as below mentioned in the above created database.
