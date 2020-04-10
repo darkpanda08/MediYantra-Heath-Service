@@ -37,6 +37,7 @@ For production environments...
 ```sh
 $ npm run start
 ```
+Note: If the application is being run other than on localhost, HTTPS is mandatory to use Geolocation feature.
 
 ### Extra Steps to Perform 
 
