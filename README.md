@@ -41,3 +41,18 @@ $ npm run start
 ### Extra Steps to Perform 
 
 MediYantra is currently extended with the following tools. Instructions on how to set them up are mentioned below.
+
+1) To setup MongoDB, get the URI for MongoDB and paste it in config/keys.js file inside the quotes on line 2.
+
+2) To setup MySQL, Create a database and provide the connection details as envronment varibales as below mentioned:
+DB_host : Hostname
+DB_user : Username
+DB_pass : Password
+DB_name : Database Name
+
+3) Create three tables as below mentioned in the above created database.
+a. helpline_details : With columns id, uid, first_name, last_name, qualification, speciality, hospital, location, email and telephone.
+b. ngo_details: With columns id, name, website and phone 
+c. testing_centres: With columns id, state and name
+
+4) Go to elfsight.com and create 4 widgets: Click to call, Social Media links, Chats and Coronavirus Track and add the provided code into the views/dashboard.ejs in line 89 and views/layout.ejs in line 17-19.
