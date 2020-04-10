@@ -4,10 +4,6 @@ MediYantra - A suitable website to offer basic health services
 ## Desciption
 MediYantra is a cloud-enabled, mobile-ready Express JS powered web application to help people .
 
-  - Type some Markdown on the left
-  - See HTML in the right
-  - Magic
-
 ## Software Requirements
   - NodeJs
   - MongoBD
