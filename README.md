@@ -6,6 +6,8 @@ MediYantra is a cloud-enabled, mobile-ready Express JS powered web application t
 
 Youtube Link: https://youtu.be/Dr_CLm4s6WE
 
+Live Version of this Web Application: https://projects.darkpanda08.me
+
 ## Software Requirements
   - NodeJs
   - MongoBD
