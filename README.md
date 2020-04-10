@@ -18,6 +18,7 @@ Youtube Link: https://youtu.be/Dr_CLm4s6WE
 ![](https://github.com/darkpanda08/MediYantra-Heath-Service/blob/master/process_flow.png?raw=true)
 
 ## Data Flow Diagram
+![](https://github.com/darkpanda08/MediYantra-Heath-Service/blob/master/data_flow.png?raw=true)
 
 ## Installation
 
