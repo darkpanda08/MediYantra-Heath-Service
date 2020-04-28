@@ -64,6 +64,11 @@ DB_name : Database Name
 
 6. While registering for any hospital, find the Plus Code of that hospital from Google Maps (https://maps.google.com) as it is mandatory for registration. 
 
+## Team
+- Siddharth Ghodasara : https://github.com/SiddharthGhodasara
+- Prashanth R : https://github.com/Prashanth1999xD
+- Bharath Bhaskar: https://github.com/bbharath4
+
 ## Additional Details
 
 Youtube Link: https://youtu.be/Dr_CLm4s6WE
