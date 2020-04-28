@@ -9,6 +9,8 @@ MediYantra is a cloud-enabled, mobile-ready Express JS powered web application t
   - MongoBD
   - MySQL
   - HTML & CSS
+  - Bootstrap
+  - Javascript
   - Google Maps API
   - elfsight Website Widgets
   
@@ -65,6 +67,7 @@ DB_name : Database Name
 6. While registering for any hospital, find the Plus Code of that hospital from Google Maps (https://maps.google.com) as it is mandatory for registration. 
 
 ## Team
+- Vineet Ranjan : https://github.com/darkpanda08
 - Siddharth Ghodasara : https://github.com/SiddharthGhodasara
 - Prashanth R : https://github.com/Prashanth1999xD
 - Bharath Bhaskar: https://github.com/bbharath4
