@@ -75,5 +75,3 @@ DB_name : Database Name
 ## Additional Details
 
 Youtube Link: https://youtu.be/Dr_CLm4s6WE
-
-Live Version of this Web Application: https://projects.darkpanda08.me
