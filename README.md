@@ -62,7 +62,7 @@ DB_name : Database Name
 
 4. Go to elfsight.com and create 4 widgets: Click to call, Social Media links, Chats and Coronavirus Track and add the provided code into the views/dashboard.ejs in line 89 and views/layout.ejs in line 17-19.
 
-5. Hospital registration to be done so that he details such as Beds Avialble, Total Beds and Total Doctors can be shown on Maps.
+5. Hospital registration to be done so that he details such as Beds Avialable, Total Beds and Total Doctors can be shown on Maps.
 
 6. While registering for any hospital, find the Plus Code of that hospital from Google Maps (https://maps.google.com) as it is mandatory for registration. 
 
