@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const flash = require('connect-flash');
 const session = require('express-session');
 const passport = require('passport');
+require('dotenv').config()
 
 const app = express();
 
@@ -37,7 +38,7 @@ app.use('/public', express.static('public'));
 
 // Express Session
 app.use(session({
-    secret: 'secret',
+    secret: 'Blah going which master like',
     resave: true,
     saveUninitialized: true
 }));

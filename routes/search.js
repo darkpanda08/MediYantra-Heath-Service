@@ -12,8 +12,6 @@ var pool = mysql.createPool({
     debug    : false
 });
 
-//var table = process.env.table || "userInfo";
-
 // Search Users Handle
 router.post("/", (req,res) => {
     pool.getConnection(function(err, connection) {
