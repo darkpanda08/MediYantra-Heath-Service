@@ -18,7 +18,7 @@ var pool = mysql.createPool({
 });
 
 // Welcome Page
-router.get('/', function (req, res) {
+router.get('/', (req, res) => {
     if (!req.user) {
         res.render('dashboard', { login_info: false });
     }
@@ -28,7 +28,7 @@ router.get('/', function (req, res) {
 });
 
 // Hospitals Near Me
-router.get('/track', function (req,res){
+router.get('/track', (req,res) => {
     if (!req.user) {
         res.render('near_me', { login_info: false });
     }
@@ -38,16 +38,16 @@ router.get('/track', function (req,res){
 });
 
 // NGO
-router.get('/ngo', function (req,res){
+router.get('/ngo', (req,res) => {
     pool.getConnection(function(err, connection) {
         if (err) {
             console.log(err.code + ' : '+ err.sqlMessage);
-            return res.json({"code" : 100, "status" : "Error in connection database"});
+            return res.json({"code" : 100, "status" : "Error in connecting to database"});
         }
         
         // Use the connection
         query = query = "SELECT * FROM ngo_details;";
-        connection.query(query, function (error, results, fields) {
+        connection.query(query, (error, results, fields) => {
             
             // When done with the connection, release it.
             connection.release();
@@ -63,7 +63,7 @@ router.get('/ngo', function (req,res){
 
             // Handle error after the release.
             else {
-                req.flash('error_msg', 'There is some error. PLease reload the page');
+                req.flash('error_msg', 'There is some error. Please reload the page');
                 return res.redirect('/');
             }
        
@@ -73,8 +73,8 @@ router.get('/ngo', function (req,res){
 });
 
 // Get data for beds
-router.post('/loc', function (req,res){ 
-    User.find({ plus_code: req.body.plus_code }, function(err, results){
+router.post('/loc', (req,res) => { 
+    User.find({ plus_code: req.body.plus_code }, (err, results) => {
         res.json(results[0]);
     });
 });
