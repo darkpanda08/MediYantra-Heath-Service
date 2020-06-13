@@ -8,7 +8,7 @@
     "dev": "nodemon app.js"
   },
   "keywords": [],
-  "author": "darkpanda08",
+  "author": "Vineet Ranjan (darkpanda08)",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
