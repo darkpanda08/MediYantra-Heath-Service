@@ -74,5 +74,5 @@ DB_name : Database Name
 
 ## Additional Details
 
-Youtube Link: https://youtu.be/Dr_CLm4s6WE
+Youtube Link: https://youtu.be/Dr_CLm4s6WE </br>
 Live Version Demo: https://mediyantra.herokuapp.com/
