@@ -53,10 +53,10 @@
             </thead>
             <tbody>
               <% for(var i=0; i<details.length; i++) { %>
-                <tr class="clickable" onclick="window.location='/doc?uid=' + '<%= details[i].uid %>'">
+                <tr class="clickable" onclick="window.location='/helpline/' + '<%= details[i]._id %>'">
                   <th scope="row"><%= i+1 %></th>
-                  <td><%= details[i].first_name %></td>
-                  <td><%= details[i].last_name %></td>
+                  <td><%= details[i].firstName %></td>
+                  <td><%= details[i].lastName %></td>
                   <td><%= details[i].speciality %></td>
                   <td><%= details[i].location %></td>
                 </tr>

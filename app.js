@@ -56,7 +56,6 @@ app.use((req, res, next) => {
 app.use('/', require('./routes/index'))
 app.use('/users', require('./routes/users'))
 app.use('/ngo', require('./routes/ngo'))
-app.use('/doc', require('./routes/doc'))
 app.use('/search', require('./routes/search'))
 app.use('/helpline', require('./routes/helpline'))
 

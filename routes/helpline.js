@@ -1,51 +1,64 @@
 const express = require('express');
 const router = express.Router();
-var mysql = require('mysql');
 
-// MySQL connection
-var pool = mysql.createPool({
-    connectionLimit: 100,
-    host     : process.env.DB_host,
-    user     : process.env.DB_user,
-    password : process.env.DB_pass,
-    database : process.env.DB_name,
-    debug    : false
+// Helpline Details model
+const Helpline = require('../models/Helpline');
+
+
+router.get('/', (req,res) => {
+    Helpline.find({}, (err, results) => {
+        if (!err) {
+            if (!req.user) {
+                res.render('helpline', { login_info: false, details: results });
+            }
+            else {
+                res.render('helpline', { login_info: true, details: results });
+            }             
+        } else {
+            req.flash('error_msg', 'Error. Please refresh the page.');
+            return res.redirect('/');
+        }
+    }); 
 });
 
-// Helpline Page
-router.get("/", (req,res) => {    
-    pool.getConnection(function(err, connection) {
-        if (err) {
-            console.log(err.code + ' : '+ err.sqlMessage);
-            return res.json({"code" : 100, "status" : "Error in connection database"});
-        }
-        
-        // Use the connection
-        query = query = "SELECT * FROM helpline_details;";
-        connection.query(query, function (error, results, fields) {
-            
-            // When done with the connection, release it.
-            connection.release();
-
-            if (!error) {  
-                if (!req.user) {
-                    res.render('helpline', { login_info: false, details: results });
-                }
-                else {
-                    res.render('helpline', { login_info: true, details: results });
-                }                
+router.get('/:id', (req,res) => {
+    Helpline.findById(req.params.id, (err, results) => {
+        if (!err) {
+            if (!req.user) {
+                res.render('doc', { login_info: false, doc_details: results });
             }
-
-            // Handle error after the release.
             else {
-                req.flash('error_msg', 'There is some error. PLease reload the page');
-                return res.redirect('/');
-            }
-       
-          // Don't use the connection here, it has been returned to the pool.
-        });
+                res.render('doc', { login_info: true, doc_details: results });
+            }             
+        } else {
+            req.flash('error_msg', 'Error. Please refresh the page.');
+            return res.redirect('/');
+        }
     });
 });
+
+// To add Helpline Details
+// router.post('/', (req,res) => {
+//     const { firstName, lastName, qualification, speciality, hospital, location, email, telephone, skype } = req.body;
+
+//     const newHelpine = new Helpline({
+//         firstName, 
+//         lastName, 
+//         qualification, 
+//         speciality, 
+//         hospital, 
+//         location, 
+//         email,
+//         telephone,
+//         skype
+//     });
+
+//     newHelpine.save()
+//         .then(helpline => {
+//             res.json({"success":helpline});
+//         })
+//         .catch(err => console.log(err));
+// })
 
 
 module.exports = router;

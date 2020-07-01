@@ -39,17 +39,18 @@
     <main role="main" class="flex-shrink-0">
       <div class="container">
         <% include ./partials/messages %>
-        <h1 class="mt-5">Doctor Details</h1>
+        <h1 class="mt-3">Doctor Details</h1>
         <div class="col-md-8">
             <ul class="list-group" style="padding-bottom: 10px; padding-top: 10px;">
-                <li class="list-group-item"><strong>First Name: </strong><%= doc_details[0].first_name %></li>
-                <li class="list-group-item"><strong>Last Name: </strong><%= doc_details[0].last_name %></li>
-                <li class="list-group-item"><strong>Email: </strong><%= doc_details[0].qualification %></li>
-                <li class="list-group-item"><strong>Speciality: </strong><%= doc_details[0].speciality %></li>
-                <li class="list-group-item"><strong>Hospital: </strong><%= doc_details[0].hospital %></li>
-                <li class="list-group-item"><strong>Location: </strong><%= doc_details[0].location %></li>
-                <li class="list-group-item"><strong>Email: </strong><%= doc_details[0].email %></li>
-                <li class="list-group-item"><strong>Telephone No: </strong><%= doc_details[0].telephone %></li>
+                <li class="list-group-item"><strong>First Name: </strong><%= doc_details.firstName %></li>
+                <li class="list-group-item"><strong>Last Name: </strong><%= doc_details.lastName %></li>
+                <li class="list-group-item"><strong>Email: </strong><%= doc_details.qualification %></li>
+                <li class="list-group-item"><strong>Speciality: </strong><%= doc_details.speciality %></li>
+                <li class="list-group-item"><strong>Hospital: </strong><%= doc_details.hospital %></li>
+                <li class="list-group-item"><strong>Location: </strong><%= doc_details.location %></li>
+                <li class="list-group-item"><strong>Email: </strong><%= doc_details.email %></li>
+                <li class="list-group-item"><strong>Telephone No: </strong><%= doc_details.telephone %></li>
+                <li class="list-group-item"><strong>Skype ID: </strong><%= doc_details.skype %></li>
             </ul>
             <a href="/helpline" class="btn btn-info my-2 my-sm-0">Back</a>
         </div>
