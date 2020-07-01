@@ -3,7 +3,9 @@ const expressLayouts = require('express-ejs-layouts');
 const mongoose = require('mongoose');
 const flash = require('connect-flash');
 const session = require('express-session');
+const MongoStore = require('connect-mongo')(session)
 const passport = require('passport');
+const connectDB = require('./config/db')
 require('dotenv').config()
 
 const app = express();
@@ -11,36 +13,26 @@ const app = express();
 // Passport Config
 require('./config/passport')(passport);
 
-// DB Config
-const db = require('./config/keys').MongoURI;
-
-// Connect to Mongo
-const options = {
-    useNewUrlParser: true,
-    useFindAndModify: false,
-    useUnifiedTopology: true,
-    autoIndex: false,
-    dbName: "hackathon",
-    poolSize: 10
-};
-
-var conn = mongoose.connect(db, options)
-    .then(() => console.log('MongoDB Connected...'))
-    .catch(err => console.log(err));
+// Connect to MongoDB
+connectDB()
 
 // EJS
 app.use(expressLayouts);
 app.set('view engine', 'ejs');
 
 // Bodyparser
-app.use(express.urlencoded({extended: false}));
-app.use('/public', express.static('public'));
+app.use(express.json())
+app.use(express.urlencoded({extended: false}))
+
+// Static Folder
+app.use('/public', express.static('public'))
 
 // Express Session
 app.use(session({
     secret: 'Blah going which master like',
     resave: true,
-    saveUninitialized: true
+    saveUninitialized: true,
+    store: new MongoStore({ mongooseConnection: mongoose.connection })
 }));
 
 // Passport middleware
@@ -61,10 +53,12 @@ app.use((req, res, next) => {
 })
 
 // Routes
-app.use('/', require('./routes/index'));
-app.use('/users', require('./routes/users'));
-app.use('/doc', require('./routes/doc'));
-app.use('/search', require('./routes/search'));
+app.use('/', require('./routes/index'))
+app.use('/users', require('./routes/users'))
+app.use('/ngo', require('./routes/ngo'))
+app.use('/doc', require('./routes/doc'))
+app.use('/search', require('./routes/search'))
+app.use('/helpline', require('./routes/helpline'))
 
 // 404
 app.use((req, res, next) => {
