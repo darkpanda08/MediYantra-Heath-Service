@@ -47,14 +47,4 @@ router.get('/account', ensureAuthenticated, (req,res) =>
     })
 );
 
-// Search Page
-router.get('/search', (req,res) => {
-    if (!req.user) {
-        res.render('search', { login_info: false });
-    }
-    else {
-        res.render('search', { login_info: true });
-    }
-});
-
 module.exports = router;

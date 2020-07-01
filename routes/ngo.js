@@ -33,7 +33,7 @@ router.get('/', (req,res) => {
 
 //     newNgo.save()
 //         .then(ngo => {
-//             res.json({"success":"ngo"});
+//             res.json({"success":ngo});
 //         })
 //         .catch(err => console.log(err));
 // })

@@ -4,7 +4,7 @@ const router = express.Router();
 // Helpline Details model
 const Helpline = require('../models/Helpline');
 
-
+// To get list of Doctos
 router.get('/', (req,res) => {
     Helpline.find({}, (err, results) => {
         if (!err) {
@@ -21,6 +21,7 @@ router.get('/', (req,res) => {
     }); 
 });
 
+// To get full details of doctor wit id specified
 router.get('/:id', (req,res) => {
     Helpline.findById(req.params.id, (err, results) => {
         if (!err) {
