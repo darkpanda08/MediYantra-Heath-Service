@@ -22,20 +22,21 @@ router.get('/', (req,res) => {
 
 
 // To add NGO Details
-// router.post('/', (req,res) => {
-//     const { name, website, phone } = req.body;
+// @TO-DO: Add promise
+// Input should be [{"name":"", "website":"", "phone":""},{...}]
 
-//     const newNgo = new Ngo({
-//         name,
-//         website,
-//         phone
-//     });
-
-//     newNgo.save()
-//         .then(ngo => {
-//             res.json({"success":ngo});
-//         })
-//         .catch(err => console.log(err));
+// router.post('/add', (req,res) => {
+//     data = req.body
+//     data.forEach(element => {
+//         const { name, website, phone } = element;
+//         const newNgo = new Ngo({
+//             name,
+//             website,
+//             phone
+//         })  
+//         newNgo.save()
+//     })
+//     return res.json({"success":"OK"})
 // })
 
 module.exports = router;

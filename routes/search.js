@@ -37,8 +37,9 @@ router.post('/', (req,res) => {
 });
 
 // To add Testing Centres Details
-// Add promise
+// @TO-DO: Add promise
 // Input should be [{"state":"", "hospotalName":""},{...}]
+
 // router.post('/add', (req,res) => {
 //     data = req.body
 //     data.forEach(element => {
