@@ -6,65 +6,61 @@ MediYantra is a cloud-enabled, mobile-ready Express JS powered web application t
 
 ## Software Requirements
   - NodeJs
-  - MongoBD
-  - MySQL
+  - MongoDB
   - HTML & CSS
   - Bootstrap
   - Javascript
+  - JQuery
   - Google Maps API
   - elfsight Website Widgets
   
 ## Process Flow
-![](https://github.com/darkpanda08/MediYantra-Heath-Service/blob/master/process_flow.png?raw=true)
+![alt text](https://github.com/darkpanda08/MediYantra-Heath-Service/blob/master/process_flow.png?raw=true "Process Flow Diagram")
 
 ## Data Flow Diagram
-![](https://github.com/darkpanda08/MediYantra-Heath-Service/blob/master/data_flow.png?raw=true)
+![alt text](https://github.com/darkpanda08/MediYantra-Heath-Service/blob/master/data_flow.png?raw=true "Data Flow Diagram")
 
 ## Installation
 
 MediYantra requires [Node.js](https://nodejs.org/) v4+ to run.
 
-Install the dependencies and devDependencies and start the server.
+Run the following command to clone the repository and install the dependencies and devDependencies.
 
 ```sh
 $ git clone https://github.com/darkpanda08/MediYantra-Heath-Service.git
 $ cd MediYantra-Heath-Service
 $ npm install
-$ npm run start
 ```
-For development environments...
+To run in development mode...
 ```sh
 $ npm run dev
 ```
-For production environments...
+To run production mode...
 
 ```sh
-$ npm run start
+$ npm start
 ```
-Note: If the application is being run other than on localhost, HTTPS is mandatory to use Geolocation feature.
+>If the application is being run other than on localhost, HTTPS is mandatory to use Geolocation feature.
 
 ### Extra Steps to Perform 
 
 MediYantra is currently extended with the following tools. Instructions on how to set them up are mentioned below.
 
-1. To setup MongoDB, get the URI for MongoDB and paste it in config/keys.js file inside the quotes on line 2.
+1. To setup MongoDB, get the URI for MongoDB and set it as environment variable with Key as "Mongo_URI" and Value as the URI.
 
-2. To setup MySQL, Create a database and provide the connection details as envronment varibales as below mentioned:
-DB_host : Hostname,
-DB_user : Username,
-DB_pass : Password,
-DB_name : Database Name
+2. To populate the data in MongoDB for Testing Centres, NGO's and Helpine check the data folder for sample JSON file with data.
 
-3. Create three tables as below mentioned in the above created database.
-(a) helpline_details : With columns id, uid, first_name, last_name, qualification, speciality, hospital, location, email and telephone.
-(b) ngo_details: With columns id, name, website and phone 
-(c) testing_centres: With columns id, state and name
+3. Go to routes/ngo.js and uncomment from line 28-40. Then run the server and send POST request to localhost:5000/ngo/add with body having data as shown in JSON file. After data is uploaded, comment the lines 28-40.
+
+4. Go to routes/helpline.js and uncomment from line 44-62. Then run the server and send POST request to localhost:5000/helpline/add with body having data as shown in JSON file. After data is uploaded, comment the lines 44-62.
+
+5. Go to routes/search.js and uncomment from line 43-54. Then run the server and send POST request to localhost:5000/search/add with body having data as shown in JSON file. After data is uploaded, comment the lines 43-54.
 
 4. Go to elfsight.com and create 4 widgets: Click to call, Social Media links, Chats and Coronavirus Track and add the provided code into the views/dashboard.ejs in line 89 and views/layout.ejs in line 17-19.
 
-5. Hospital registration to be done so that he details such as Beds Avialable, Total Beds and Total Doctors can be shown on Maps.
+5. Hospital registration to be done so that the details such as Beds Avialable, Total Beds and Total Doctors can be shown on Maps.
 
-6. While registering for any hospital, find the Plus Code of that hospital from Google Maps (https://maps.google.com) as it is mandatory for registration. 
+6. While registering for any hospital, find the Plus Code of that hospital from [Google Maps](https://maps.google.com) as it is mandatory for registration. 
 
 ## Team
 - Vineet Ranjan : https://github.com/darkpanda08
@@ -76,3 +72,6 @@ DB_name : Database Name
 
 Youtube Link: https://youtu.be/Dr_CLm4s6WE </br>
 Live Version Demo: https://mediyantra.herokuapp.com/
+
+## Achievement
+Project selected in Top 10 out of 156 submissions in [e-yantra Hackathon](https://www.e-yantra.org/).
