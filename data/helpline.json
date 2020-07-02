@@ -2,7 +2,7 @@
     {
         "firstName":"John",
         "lastName":"Markk",
-        "qulaification":"MBBS",
+        "qualification":"MBBS",
         "speciality":"General Physician",
         "hospital":"Apollo Hospital",
         "location":"Jayanagar, Bengaluru",
@@ -13,7 +13,7 @@
     {
         "firstName":"Andy",
         "lastName":"Jones",
-        "qulaification":"MD DM FSCAI",
+        "qualification":"MD DM FSCAI",
         "speciality":"ENT",
         "hospital":"Manipal Hospital",
         "location":"Whitefield, Bengaluru",
@@ -24,7 +24,7 @@
     {
         "firstName":"Vivek ",
         "lastName":"Webb",
-        "qulaification":"MBBS MNAMS Dortho DNB FAO",
+        "qualification":"MBBS MNAMS Dortho DNB FAO",
         "speciality":"Orthopaedic Surgeon",
         "hospital":"Fortis Healthcare",
         "location":"Rajajinagar, 1st Block Junction, Bengaluru",
