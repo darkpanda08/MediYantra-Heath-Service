@@ -1,0 +1,209 @@
+[
+  {
+    "state": "Andhra Pradesh",
+    "hospitalName": "Sri Venkteswara Institute of Medical Science, Tirupati"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "hospitalName": "Andhra Medical College, Visakhapatnam"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "hospitalName": "GMC, Anantapur"
+  },
+  {
+    "state": "Andaman & Nicobar Islands",
+    "hospitalName": "Regional Medical Research Centre, Port Blair"
+  },
+  {
+    "state": "Assam",
+    "hospitalName": "Guwahati Medical College, Guwahati"
+  },
+  {
+    "state": "Assam",
+    "hospitalName": "Regional Medical Research Centre, Dibrugarh"
+  },
+  {
+    "state": "Bihar",
+    "hospitalName": "Rajendra Memorial Research Institute of Medical Sciences, Patna"
+  },
+  {
+    "state": "Chandigarh",
+    "hospitalName": "Post Graduate Institute of Medical Education & Research, Chandigarh"
+  },
+  {
+    "state": "Chhattisgarh",
+    "hospitalName": "All India Institute Medical Sciences, Raipur"
+  },
+  {
+    "state": "Delhi",
+    "hospitalName": "All India Institute Medical Sciences, Delhi"
+  },
+  {
+    "state": "Delhi",
+    "hospitalName": "National Centre for Disease Control, Delhi"
+  },
+  {
+    "state": "Gujarat",
+    "hospitalName": "BJ Medical College, Ahmedabad"
+  },
+  {
+    "state": "Gujarat",
+    "hospitalName": "M.P.Shah Government Medical College, Jamnagar"
+  },
+  {
+    "state": "Harayana",
+    "hospitalName": "Pt. B.D. Sharma Post Graduate Inst. of Med. Sciences, Rohtak, Haryana"
+  },
+  {
+    "state": "Harayana",
+    "hospitalName": "BPS Govt Medical College, Sonipat"
+  },
+  {
+    "state": "Himachal Pradesh",
+    "hospitalName": "Indira Gandhi Medical College, Shimla"
+  },
+  {
+    "state": "Himachal Pradesh",
+    "hospitalName": "Dr.Rajendra Prasad Govt. Med. College, Kangra, Tanda"
+  },
+  {
+    "state": "Jammu and Kashmir",
+    "hospitalName": "Sher‐e‐Kashmir Institute of Medical Sciences, Srinagar"
+  },
+  {
+    "state": "Jammu and Kashmir",
+    "hospitalName": "Government Medical College, Jammu"
+  },
+  {
+    "state": "Jharkhand",
+    "hospitalName": "MGM Medical College, Jamshedpurh"
+  },
+  {
+    "state": "Karnataka",
+    "hospitalName": "Bangalore Medical College & Research Institute, Bangalore"
+  },
+  {
+    "state": "Karnataka",
+    "hospitalName": "National Institute of Virology Field Unit Bangalore"
+  },
+  {
+    "state": "Karnataka",
+    "hospitalName": "Mysore Medical College & Research Institute, Mysore"
+  },
+  {
+    "state": "Karnataka",
+    "hospitalName": "Hassan Inst. of Med. Sciences, Hassan"
+  },{
+    "state": "Karnataka",
+    "hospitalName": "Shimoga Inst. of Med. Sciences, Shivamogga"
+  },
+  {
+    "state": "Kerala",
+    "hospitalName": "National Institute of Virology Field Unit"
+  },
+  {
+    "state": "Kerala",
+    "hospitalName": "Govt. Medical College, Thriuvananthapuram"
+  },
+  {
+    "state": "Kerala",
+    "hospitalName": "Govt. Medical College, Kozhikhode"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "hospitalName": "All India Institute Medical Sciences, Bhopal"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "hospitalName": "National Institute of Research in Tribal Health (NIRTH), Jabalpur"
+  },
+  {
+    "state": "Meghalaya",
+    "hospitalName": "NEIGRI of Health and Medical Sciences, Shillong, Meghalaya"
+  },
+  {
+    "state": "Maharsahta",
+    "hospitalName": "Indira Gandhi Government Medical College, Nagpur"
+  },
+  {
+    "state": "Maharsahta",
+    "hospitalName": "Kasturba Hospital for Infectious Diseases, Mumbai"
+  },
+  {
+    "state": "Manipur",
+    "hospitalName": "J N Inst. of Med. Sciences Hospital, Imphal‐East"
+  },
+  {
+    "state": "Odhisa",
+    "hospitalName": "Regional Medical Research Center, Bhubaneswar"
+  },
+  {
+    "state": "Puducherry",
+    "hospitalName": "Jawaharlal Institute of Postgraduate Medical Education & Research"
+  },
+  {
+    "state": "Punjab",
+    "hospitalName": "Government Medical College, Patiala"
+  },
+  {
+    "state": "Punjab",
+    "hospitalName": "Government Medical College, Amritsar"
+  },
+  {
+    "state": "Rajasthan",
+    "hospitalName": "Sawai Man Singh, Jaipur"
+  },
+  {
+    "state": "Rajasthan",
+    "hospitalName": "Dr. S.N Medical College, Jodhpur"
+  },
+  {
+    "state": "Rajasthan",
+    "hospitalName": "Jhalawar Medical College, Jhalawar"
+  },
+  {
+    "state": "Rajasthan",
+    "hospitalName": "SP Med. College, Bikaner"
+  },
+  {
+    "state": "Tamil Nadu",
+    "hospitalName": "King’s Institute of Preventive Medicine & Research, Chennai"
+  },
+  {
+    "state": "Tamil Nadu",
+    "hospitalName": "Government Medical College, Theni"
+  },
+  {
+    "state": "Tripura",
+    "hospitalName": "Government Medical College, Agartala"
+  },
+  {
+    "state": "Telangana",
+    "hospitalName": "Gandhi Medical College, Secunderabad"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "hospitalName": "King’s George Medical University, Lucknow"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "hospitalName": "Institute of Medical Sciences, Banaras Hindu University, Varanasi"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "hospitalName": "Jawaharlal Nehru Medical College, Aligarh"
+  },
+  {
+    "state": "Uttarakhand",
+    "hospitalName": "Government Medical College, Haldwani"
+  },
+  {
+    "state": "West Bengal",
+    "hospitalName": "National Institute of Cholera and Enteric Diseases, Kolkata"
+  },
+  {
+    "state": "West Bengal",
+    "hospitalName": "IPGMER, Kolkata"
+  }
+]
