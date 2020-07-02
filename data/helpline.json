@@ -1,0 +1,35 @@
+[   
+    {
+        "firstName":"John",
+        "lastName":"Markk",
+        "qulaification":"MBBS",
+        "speciality":"General Physician",
+        "hospital":"Apollo Hospital",
+        "location":"Jayanagar, Bengaluru",
+        "email":"john_markkh@appolo.com",
+        "telephone":"080-25478563",
+        "skype":"john45"
+    },
+    {
+        "firstName":"Andy",
+        "lastName":"Jones",
+        "qulaification":"MD DM FSCAI",
+        "speciality":"ENT",
+        "hospital":"Manipal Hospital",
+        "location":"Whitefield, Bengaluru",
+        "email":"andy_jones@manipal.com",
+        "telephone":"080-23547856",
+        "skype":"andy7441"
+    },
+    {
+        "firstName":"Vivek ",
+        "lastName":"Webb",
+        "qulaification":"MBBS MNAMS Dortho DNB FAO",
+        "speciality":"Orthopaedic Surgeon",
+        "hospital":"Fortis Healthcare",
+        "location":"Rajajinagar, 1st Block Junction, Bengaluru",
+        "email":"vivek_webb@fortishealthcare.com",
+        "telephone":"080-25478547",
+        "skype":"vivekwebb"
+    }
+]
