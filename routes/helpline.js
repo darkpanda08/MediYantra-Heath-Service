@@ -47,7 +47,7 @@ router.get('/:id', (req,res) => {
 //         const { firstName, lastName, qualification, speciality, hospital, location, email, telephone, skype } = element;
 //         const newHelpine = new Helpline({
 //             firstName, 
-//             lastName, 
+//             lastName,
 //             qualification, 
 //             speciality, 
 //             hospital, 
