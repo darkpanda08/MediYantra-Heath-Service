@@ -1,75 +1,42 @@
 <body class="d-flex flex-column h-100" style="background-color: #f5f5f5;">
-    <header>
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <a class="navbar-brand" href="/">MediYantra</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="search">Testing Centre</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/ngo">NGO</a>
-            </li>
-            <% if (!login_info) { %>
-            
-            <% } else { %>
-              <li class="nav-item">
-                <a class="nav-link" href="/account">My Details</a>
-              </li>
-            <% } %>
-          </ul>
-
-          <form class="form-inline mt-2 mt-md-0">
-            <% if (!login_info) { %>
-              <a href="/users/login" class="btn btn-outline-warning my-2 my-sm-0">Login</a>
-            <% } else { %>
-              <a href="/users/logout" class="btn btn-outline-warning my-2 my-sm-0">Logout</a>
-            <% } %>
-          </form>
-        </div>
-      </nav>
-    </header>
-  
-    <main role="main" class="flex-shrink-0">
-      <div class="container">
-        <% include ./partials/messages %>
-        <h1 class="mt-5">General Advice Helpline</h1>
-        <p class="lead">Click on any of the following to get more details.</p>
-        <table id="track-table" class="table table-hover">
-            <thead>
-              <tr class="table-primary">
-                <th scope="col">Sl. No.</th>
-                <th scope="col">First Name</th>
-                <th scope="col">Last Name</th>
-                <th scope="col">Speciality</th>
-                <th scope="col">Location</th>
+  <% include ./partials/header %>
+  <main role="main" class="flex-shrink-0">
+    <div class="container">
+      <% include ./partials/messages %>
+      <h1 class="mt-5">General Advice Helpline</h1>
+      <p class="lead">Click on any of the following to get more details.</p>
+      <table id="track-table" class="table table-hover">
+          <thead>
+            <tr class="table-primary">
+              <th scope="col">Sl. No.</th>
+              <th scope="col">First Name</th>
+              <th scope="col">Last Name</th>
+              <th scope="col">Speciality</th>
+              <th scope="col">Location</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% for(var i=0; i<details.length; i++) { %>
+              <tr class="clickable" onclick="window.location='/helpline/' + '<%= details[i]._id %>'">
+                <th scope="row"><%= i+1 %></th>
+                <td><%= details[i].firstName %></td>
+                <td><%= details[i].lastName %></td>
+                <td><%= details[i].speciality %></td>
+                <td><%= details[i].location %></td>
               </tr>
-            </thead>
-            <tbody>
-              <% for(var i=0; i<details.length; i++) { %>
-                <tr class="clickable" onclick="window.location='/helpline/' + '<%= details[i]._id %>'">
-                  <th scope="row"><%= i+1 %></th>
-                  <td><%= details[i].firstName %></td>
-                  <td><%= details[i].lastName %></td>
-                  <td><%= details[i].speciality %></td>
-                  <td><%= details[i].location %></td>
-                </tr>
-              <% } %>
-            </tbody>
-        </table>
-        <a href="/" class="btn btn-primary float-right">Back</a>
-      </div>
-    </main>
-    
-    <footer class="footer mt-auto py-3">
-      <div class="container">
-        <span class="text-muted">&copy; Vineet</span>
-      </div>
-    </footer>
-  </body>
+            <% } %>
+          </tbody>
+      </table>
+      <a href="/" class="btn btn-primary float-right">Back</a>
+    </div>
+  </main>
+  
+  <% include ./partials/footer %>
+
+  <script>
+    $(document).ready(function(){
+      $('#helpline').addClass('active');
+      $('#helpline-a').append('<span class="sr-only">(current)</span>');
+    });
+  </script>
+</body>

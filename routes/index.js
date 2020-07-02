@@ -43,7 +43,8 @@ router.get('/account', ensureAuthenticated, (req,res) =>
         plus_code: req.user.plus_code,
         beds_total: req.user.beds_total,
         beds_available: req.user.beds_available,
-        total_docs: req.user.total_docs
+        total_docs: req.user.total_docs,
+        login_info: true
     })
 );
 

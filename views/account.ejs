@@ -1,32 +1,5 @@
 <body class="d-flex flex-column h-100" style="background-color: #f5f5f5;">
-  <header>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <a class="navbar-brand" href="/">MediYantra</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="/">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/search">Testing Centre</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/ngo">NGO</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="/account">My Details <span class="sr-only">(current)</a>
-          </li>
-        </ul>
-        <form class="form-inline mt-2 mt-md-0">
-          <a href="/users/logout" class="btn btn-outline-warning my-2 my-sm-0">Logout</a>
-        </form>
-      </div>
-    </nav>
-  </header>
-  
+  <% include ./partials/header %>
   <main role="main" class="flex-shrink-0">
     <div class="container">
       <% include ./partials/messages %>
@@ -115,9 +88,12 @@
     </div>
   </main>
 
-  <footer class="footer mt-auto py-3">
-    <div class="container">
-      <span class="text-muted">&copy; Vineet</span>
-    </div>
-  </footer>
+  <% include ./partials/footer %>
+
+  <script>
+    $(document).ready(function(){
+      $('#details').addClass('active');
+      $('#details-a').append('<span class="sr-only">(current)</span>');
+    });
+  </script>
 </body>
