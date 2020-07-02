@@ -39,27 +39,26 @@ router.get('/:id', (req,res) => {
 });
 
 // To add Helpline Details
-// router.post('/', (req,res) => {
-//     const { firstName, lastName, qualification, speciality, hospital, location, email, telephone, skype } = req.body;
+// @TO-DO: Add promise
 
-//     const newHelpine = new Helpline({
-//         firstName, 
-//         lastName, 
-//         qualification, 
-//         speciality, 
-//         hospital, 
-//         location, 
-//         email,
-//         telephone,
-//         skype
-//     });
-
-//     newHelpine.save()
-//         .then(helpline => {
-//             res.json({"success":helpline});
-//         })
-//         .catch(err => console.log(err));
+// router.post('/add', (req,res) => {
+//     data = req.body
+//     data.forEach(element => {
+//         const { firstName, lastName, qualification, speciality, hospital, location, email, telephone, skype } = element;
+//         const newHelpine = new Helpline({
+//             firstName, 
+//             lastName, 
+//             qualification, 
+//             speciality, 
+//             hospital, 
+//             location, 
+//             email,
+//             telephone,
+//             skype
+//         });  
+//         newHelpine.save()
+//     })
+//     return res.json({"success":"OK"})
 // })
-
 
 module.exports = router;
