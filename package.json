@@ -21,7 +21,6 @@
     "express-ejs-layouts": "^2.5.0",
     "express-session": "^1.15.6",
     "mongoose": "^5.8.2",
-    "mysql": "^2.18.1",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0"
   },
