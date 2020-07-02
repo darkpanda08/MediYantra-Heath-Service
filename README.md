@@ -50,11 +50,11 @@ MediYantra is currently extended with the following tools. Instructions on how t
 
 2. To populate the data in MongoDB for Testing Centres, NGO's and Helpine check the data folder for sample JSON file with data.
 
-3. Go to routes/ngo.js and uncomment from line 28-40. Then run the server and send POST request to localhost:5000/ngo/add with body having data as shown in JSON file. After data is uploaded, comment the lines 28-40.
+3. Go to routes/ngo.js and uncomment from line 28-40. Then run the server and send POST request to route /ngo/add with body having data as shown in JSON file. After data is uploaded, comment the lines 28-40.
 
-4. Go to routes/helpline.js and uncomment from line 44-62. Then run the server and send POST request to localhost:5000/helpline/add with body having data as shown in JSON file. After data is uploaded, comment the lines 44-62.
+4. Go to routes/helpline.js and uncomment from line 44-62. Then run the server and send POST request to route /helpline/add with body having data as shown in JSON file. After data is uploaded, comment the lines 44-62.
 
-5. Go to routes/search.js and uncomment from line 43-54. Then run the server and send POST request to localhost:5000/search/add with body having data as shown in JSON file. After data is uploaded, comment the lines 43-54.
+5. Go to routes/search.js and uncomment from line 43-54. Then run the server and send POST request to route /search/add with body having data as shown in JSON file. After data is uploaded, comment the lines 43-54.
 
 4. Go to elfsight.com and create 4 widgets: Click to call, Social Media links, Chats and Coronavirus Track and add the provided code into the views/dashboard.ejs in line 89 and views/layout.ejs in line 17-19.
 
