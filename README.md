@@ -75,3 +75,7 @@ Live Version Demo: https://mediyantra.herokuapp.com/
 
 ## Achievement
 Project selected in Top 10 out of 156 submissions in [e-yantra Hackathon](https://www.e-yantra.org/).
+
+### Future Work
+- We are currently working on a integrating a delivery drone (using ROS) with the website, to deliver essential medical supplies in the event of a crisis.
+- We are also considering adding a chat-bot to help the users navigate through the website and order medical essentials with ease.
