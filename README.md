@@ -2,7 +2,21 @@
 MediYantra Health Service - A suitable website to offer basic health services
 
 ## Desciption
-MediYantra is a cloud-enabled, mobile-ready Express JS powered web application to help patients to gather crucial information regarding hospitals nearby, diagnostic centres in their geographic region, NGO's that accept surplus food donations and medical advice from trained doctors and specialists. The website is very easy to use even for people not well-versed with the internet, to facilitate usage among both urban and rural dwellers.
+MediYantra is a versatile cloud-enabled mobile-ready Express JS-powered web application designed to help people access crucial information in a medical emergency or crisis. Its salient features include quickly gathering data on hospitals with available services in the user's vicinity, fast access to locations of diagnostic centres in any specific region, details of NGOs and other organizations that are providing aid through supplies or kits and also a fully functional 24-hour medical helpline that people can use to seek assistance from trained professionals. Each of the services are elaborated on as follows: 
+
+During a medical urgency, time is of the essence, and a person may waste valuable minutes in trying to glean information on the nearest hospital or clinic. Our website can solve this issue through the use of a highly minimalist and efficient interface specifically tailored to provide services in the shortest possible duration. On opening the website (which can be accessed both on phones and desktops), the users are greeted with four portals, each of which links to a specific service.
+
+The first portal directly allows the user to access the hospital search function, allowing them to select a hospital in close proximity (done through the integration of Google Maps API within the database). This is, by far, the most crucial task on our website and hence is allocated the first portal. 
+
+The second portal displays a list of diagnostic centres, sorted by location. Users can look up the closest centres to get a professional assessment of their medical condition. They may also elect to get tested for possible infections.
+
+The third portal allows users to avail the services of NGOs either to seek essential provisions such as food or medical supplies, or to donate any surplus provisions for the aid of others.
+
+The fourth portal enables access to a medical helpline, where users can contact doctors or physicians to receive important medical advice and guidance. The name and contact details of each person are listed in a neat and concise manner.
+
+Our website is incredibly easy to use, specifically made to ensure maximum ergonomic function and user-friendliness. Both urban residents and rural dwellers can use this service without difficulty, maximizing its applicability and potential. This projet was made as part of a joint effort in light of the recent pandemic. We sincerely hope
+our efforts do justice to the incredible zeal of individuals tirelessly working to help people during these troubled times.  
+
 
 ## Software Requirements
   - NodeJs
@@ -14,10 +28,16 @@ MediYantra is a cloud-enabled, mobile-ready Express JS powered web application t
   - Google Maps API
   - elfsight Website Widgets
   
-## Process Flow
+## Process Flow Diagram
+The below Process Flow Diagram is used to provide a pictorial representation of client-server interaction when the website is in use. 
+Three blocks are used to represent the client, server and the data layers. The client can access the website either through a web browser or a mobile phone browser. The server ( a NodeJS web server) processes the incoming request and accesses the database to procure the required information. Upon finding the appropriate data, the database transmits this back to the server which subsequently relays the data back to the user through their browser. The database makes use of external sources as well ( such as acquiring geographical information about hospital locations). The arrows shown in the process flow diagram illustrate the above processes.
+
 ![alt text](https://github.com/darkpanda08/MediYantra-Heath-Service/blob/master/process_flow.png?raw=true "Process Flow Diagram")
 
 ## Data Flow Diagram
+The Data Flow Diagram shows the retrieval of requisite information by the database.
+The database segregates all the data by allocating separate categories for each of them. For instance, the contact details of medical professionals attending to the helpline are stored separately from the details of testing centres. Based on the client request processed by the server, the database accesses the corresponding category and searches for the correct information to transmit back to the server. To obtain geographical data pertaining to testing centres, the database uses the integrated Google Maps API to search for the appropriate locations.
+
 ![alt text](https://github.com/darkpanda08/MediYantra-Heath-Service/blob/master/data_flow.png?raw=true "Data Flow Diagram")
 
 ## Installation
