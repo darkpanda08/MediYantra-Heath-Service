@@ -3,11 +3,9 @@ const mongoose = require('mongoose')
 // MongoDB Options
 const options = {
     useNewUrlParser: true,
-    useFindAndModify: false,
     useUnifiedTopology: true,
     autoIndex: false,
-    dbName: "hackathon",
-    poolSize: 10
+    dbName: "hackathon"
 };
 
 // Connect to MongoDB
